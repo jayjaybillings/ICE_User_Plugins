@@ -14,6 +14,8 @@ package org.eclipse.ice.mdplca;
 import javax.xml.bind.annotation.XmlRootElement;
 
 import org.eclipse.core.resources.IProject;
+import org.eclipse.ice.datastructures.form.DataComponent;
+import org.eclipse.ice.datastructures.form.Entry;
 import org.eclipse.ice.item.model.Model;
 
 /**
@@ -33,4 +35,34 @@ public class MDPLCAModel extends Model {
 		super(project);
 	}
 
+	@Override
+	protected void setupForm() {
+		// Keep this because it constructs some stuff
+		super.setupForm();
+		
+		Entry groupName = new Entry();
+		groupName.setName("Name of the group");
+		groupName.setId(1);
+		groupName.setDescription("Name of the group to which the person belongs");
+		groupName.setTag("group");
+		
+		Entry personName = new Entry();
+		personName.setName("Name of the person");
+		personName.setId(2);
+		personName.setDescription("Name of the person");
+		personName.setTag("person");
+		
+		DataComponent peopleComponent = new DataComponent();
+		peopleComponent.setName("People Component");
+		peopleComponent.setDescription("Information on people in the group");
+		peopleComponent.setId(1);
+		peopleComponent.addEntry(groupName);
+		peopleComponent.addEntry(personName);
+		
+		// Make sure to put this in the Form
+		form.addComponent(peopleComponent);
+		
+		return;
+	}
+	
 }
