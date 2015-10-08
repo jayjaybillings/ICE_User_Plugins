@@ -22,7 +22,7 @@ import org.eclipse.ice.item.model.AbstractModelBuilder;
  * @author Jay Jay Billings
  *
  */
-public class MDPLCALauncherBuilder extends AbstractModelBuilder {
+public class MDPLCALauncherBuilder extends AbstractItemBuilder {
 	
 	/**
 	 * The name of this builder.
