@@ -6,7 +6,10 @@
          name="Markov Decision Process - Local Collision Avoidance Plugin"
          point="org.eclipse.ice.item.itemBuilder">
       <implementation
-            class="org.eclipse.ice.mdplca.MDPLCAItemBuilder">
+            class="org.eclipse.ice.mdplca.MDPLCAModelBuilder">
+      </implementation>
+      <implementation
+            class="org.eclipse.ice.mdplca.MDPLCALauncherBuilder">
       </implementation>
    </extension>
 
