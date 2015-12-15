@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Test1
+Bundle-SymbolicName: com.tests.test1
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: TESTS
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Require-Bundle: org.eclipse.ice.datastructures;bundle-version="2.1.8",
+ org.eclipse.core.resources;bundle-version="3.10.0",
+ org.eclipse.ice.item;bundle-version="2.1.8",
+ org.eclipse.core.runtime;bundle-version="3.11.0"
+Service-Component: OSGi-INF/LauncherComponent.xml
